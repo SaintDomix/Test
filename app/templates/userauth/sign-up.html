@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      background-color: #f8f6f6;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #login-container {
+      background-color: #ffffff;
+      padding: 20px;
+      text-align: center;
+      border-radius: 10px;
+      height: 400px;
+      max-width: 435px; /* Set a maximum width for the container */
+      width: 100%;
+    }
+
+    #logo {
+      width: 180px; /* Set the width of the logo */
+      height: auto; /* Maintain the aspect ratio */
+      margin-bottom: 20px;
+    }
+
+    h1, h2, p {
+      font-family: Arial;
+      text-align: left;
+      margin: 0;
+      padding: 0;
+    }
+
+
+    h1 {
+      font-size: 1.4em;
+    }
+
+    .email2 {
+      color: #202223;
+      padding-top: 10px;
+      padding-bottom: 7px;
+      font-size: 0.9em;
+      /*margin-top: 10px;*/
+    }
+
+    .email {
+      padding-top: 5px;
+      color: #6c7074;
+      font-size: 0.8em;
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+
+    /*.privacy{*/
+    /*    text-align: left;*/
+    /*    font-size: 0.8em;*/
+    /*    color: #1878b8;*/
+    /*    padding-top: 44px;*/
+    /*}*/
+
+    a {
+      width: 50px;
+      height: 1px;
+      text-align: left;
+      color: #1878b8;
+      font-family: Arial;
+      font-size: 0.8em;
+      display: block;
+      transition: color 0.3s ease;
+
+    }
+    a:hover {
+      color: #0094ff;
+    }
+
+    input {
+      width: calc(100%);
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+      border-radius: 5px;
+      height: 45px;
+      border: 1px solid #ccc;
+    }
+
+
+
+    button {
+      margin-bottom: 50px;
+      margin-top: 10px;
+      background-color: #4caf50;
+      color: #ffffff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      height: 45px;
+      width: calc(100%);
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+<div class="custom-container">
+    <div class="logo">
+    <img src="https://1000logos.net/wp-content/uploads/2023/11/Romand-Logo.jpg" alt="Logo" id="logo">
+    </div>
+            <div class="login-card">
+                <div class="text-center">
+                    <h1> Login Page </h1>
+                </div>
+                <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Register</button>
+                </form>
+            </div>
+        </div>
+</body>
+</html>
